@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create/Edit Post – Mock Post Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topnav">
+    <span>Create/Edit Post</span>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="container">
+
+    <label>Title</label>
+    <input id="title" type="text" />
+
+    <label>Content</label>
+
+    <!-- Formatting Toolbar -->
+    <div class="toolbar">
+      <button onclick="format('bold')"><b>B</b></button>
+      <button onclick="format('italic')"><i>I</i></button>
+      <button onclick="format('underline')"><u>U</u></button>
+    </div>
+
+    <!-- Rich Text Editor -->
+    <div id="richContent" class="rich-editor" contenteditable="true"></div>
+
+    <label>Tags (comma-separated)</label>
+    <input id="tags" type="text" />
+
+    <label>Upload Image</label>
+    <input id="imageUpload" type="file" accept="image/*, .jpg, .jpeg, .png" />
+
+    <div class="row">
+      <button onclick="saveDraft()">Save Draft</button>
+      <button onclick="previewPost()">Preview</button>
+      <button onclick="publishPost()">Publish</button>
+      <button onclick="cancelPost()">Cancel</button>
+    </div>
+
+    <p id="autosave-status" class="note"></p>
+    <p id="error" class="error"></p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard – Mock Post Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topnav">
+    <span>Dashboard</span>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="container">
+    <h2>Your Posts</h2>
+    <button onclick="goToCreate()">+ New Post</button>
+
+    <h3>Published</h3>
+    <div id="published-list"></div>
+
+    <h3>Drafts</h3>
+    <div id="draft-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
