@@ -3,6 +3,10 @@
 Welcome to my **QA Portfolio** — a collection of projects demonstrating my skills in **manual testing**, **automation**, **API testing**, **database validation**, and **release testing**.  
 Each section reflects how I approach software quality through structured testing, curiosity, and attention to detail.
 
+This repository is structured to reflect a **real QA project**, including full documentation, test cases, defect reports, automation code, and a mock application created specifically for UI automation practice.
+
+> **Note:** Some sections (Automation, API Testing, Database Testing, Release Testing) are still in progress.  
+> I update this repository frequently as I continue expanding my QA skill set.
 ---
 
 ## 👩🏻‍💻 About Me
@@ -25,94 +29,212 @@ I also have an interest in front-end development and UI/UX, which influences how
 
 ---
 
-## 📂 Portfolio Structure
+# 📁 Repository Structure Overview
 
-This portfolio is organized into key QA areas:
+Ashlynn-QA-Portfolio
+├── 00-Mock-Post-Editor-App/
+├── 01-Manual-Testing/
+├── 02-Automation-Foundation-Playwright/
+├── 03-API-Testing/
+├── 04-Basic-Database-Testing/
+└── 05-Release-Testing/
 
-### 01-Manual-Testing
-Contains documents and examples of my manual testing work, including:
-- **Test Plans**: Detailed plans for testing e-commerce functionality.
-- **Test Cases**: Structured test cases for login, post creation, and user profile modules.
-- **Test Scenarios**: High-level testing scenarios covering main user flows.
-- **Bug Reports**: Example bug reports with clear reproduction steps and impact assessment.
-- **QA Documentation**: Foundational QA knowledge including SDLC, STLC, testing types, design techniques, and feature testing approach.
-
-### 02-Automation-Foundation-Playwright
-Demonstrates basic automated testing using **Playwright**, with a clear Page Object Model structure:
-- **Tests**: End-to-end automated scripts for login, post creation, and search functionality.
-- **Pages**: Page Object classes for modular and maintainable tests.
-- **Reports**: HTML test execution reports generated from automation runs.
-- **Configuration**: `playwright.config.ts` and `package.json` for setup and running tests.
-
-### 03-API-Testing
-Shows foundational API testing skills:
-- **Collections**: Postman collection of basic API requests (GET/POST/PUT).
-- **Reports**: Exported test results and execution summaries.
-- **Documentation**: Notes and insights on API testing methodology.
-
-### 04-Basic-Database-Testing
-Illustrates basic database validation:
-- **SQL Checks**: Queries for verifying user and post tables.
-- **DB Reports**: Summaries of database test results and observations.
-
-### 05-Release-Testing
-Demonstrates knowledge of testing during software releases:
-- **Regression Test Execution**: Tracking execution of regression tests.
-- **Smoke Testing Checklist**: Quick validation of critical functionalities.
-- **Post-Release Test Report**: Summary of post-release verification and findings.
+Below is a breakdown of each section:
 
 ---
 
-## ⚙️ How to Use This Portfolio
+## 💡 **00 — Mock Post Editor App (Custom UI Application)**  
+A very lightweight HTML/CSS/JavaScript application I built to practice **UI automation**, **validation testing**, and **XSS/attachment handling scenarios**.
 
-1. **Manual Testing**
-   - Open the markdown or Excel files in the `01-Manual-Testing` folder.
-   - Review test plans, test cases, bug reports, and documentation to see structured QA practices.
+Contents include:
+- `editor.html`, `preview.html`, `dashboard.html`
+- Script & styles
+- A realistic environment for CRUD operations (create/edit/delete posts)
+- Supports automation via Playwright’s Page Object Model (POM)
 
-2. **Automation Testing**
-   - Install dependencies:
-     ```bash
-     npm install
-     ```
-   - Run Playwright tests:
-     ```bash
-     npx playwright test
-     ```
-   - View HTML reports in `02-Automation-Foundation-Playwright/reports/html-report`.
-
-3. **API Testing**
-   - Open Postman collection (`.json`) in Postman.
-   - Execute requests and validate responses.
-   - Review notes in `Documentation/API_Testing_Notes.md`.
-
-4. **Database Testing**
-   - Run SQL scripts against a local or test database.
-   - Refer to `DB_Test_Summary.md` for observations and expected outcomes.
-
-5. **Release Testing**
-   - Follow the checklists in `Regression_Test_Execution.md` and `Smoke_Testing_Checklist.md`.
-   - Review the post-release testing process in `Post_Release_Test_Report.md`.
+This mock app allows me to demonstrate testing of:
+- Form validation  
+- Draft autosave  
+- Publish/unpublish flows  
+- File upload handling  
+- Input sanitization  
 
 ---
 
-## 🎯 Key Skills Demonstrated
-- Manual testing: test planning, case creation, bug reporting
-- Automation testing: Playwright, Page Object Model, end-to-end test scripts
-- API testing: Postman collection creation and execution
-- Database validation: SQL checks and reporting
-- Release testing: regression and smoke test execution
+## 📝 **01 — Manual Testing**
+
+This module contains **fully written and executed manual QA artefacts**, including:
+
+### ✔ Test Cases (Excel Files)
+Located in `01-Manual-Testing/Test-Cases/`
+- **Login_Test_Cases.xlsx**
+- **UserProfile_Test_Cases.xlsx**
+- **Post_Creation_Test_Cases.xlsx**
+
+Each file includes:
+- Positive & negative test cases  
+- Boundary tests  
+- Edge cases  
+- Actual results  
+- Linked bug IDs  
+- Final status & priority  
+
+### ✔ Test Execution Summaries
+Documenting:
+- Total test cases run  
+- Pass/fail statistics  
+- Bugs logged  
+- Observations and risks  
+
+### ✔ Bug Reports  
+In `01-Manual-Testing/Bug-Reports/`, with screenshots.  
+Each report includes:
+- Environment details  
+- Steps to reproduce  
+- Expected vs actual results  
+- Evidence  
+- Severity & priority  
+
+### ✔ QA Documentation
+Includes:
+- **SDLC.md**
+- **STLC.md**
+- **Test_Types.md**
+- **Test_Design_Techniques.md**
+- **How_I_Test_a_Feature.md**
+
+These files reflect my understanding of QA methodologies, testing techniques, and structured approaches.
+
+### ✔ Test Plan  
+Located in `01-Manual-Testing/Test-Plan/Ecommerce_Test_Plan.md`  
+Covers:
+- Scope & objectives  
+- Environments  
+- Testing strategy  
+- Deliverables  
+- Risks & mitigations  
+- Test schedule  
+- Entry/Exit criteria  
 
 ---
 
-## 📌 Notes
+## 🤖 **02 — Automation (Playwright + Page Object Model)**
+> **Status: In Progress**
 
-- This portfolio reflects the practical skills I’ve been developing while learning QA testing.  
-- The projects included here demonstrate how I plan, execute, and document tests across manual, API, UI automation, and release workflows.  
-- The goal of this repository is to show my testing mindset, structure, attention to detail, and willingness to grow as a junior QA professional.
+This module contains the foundation of my UI automation framework built with **Playwright** and the **Page Object Model (POM)**.
+
+### ✅ **What’s already included**
+- A working **POM structure** (`BasePage`, `LoginPage`, `PostEditorPage`)
+- Automated tests for:
+  - `login.spec.ts` — Login flow on Mock Post Editor App
+  - `create_post.spec.ts` — Create, publish, and draft actions
+  - `search.spec.ts` — Search functionality on Demo Web Shop
+- **Playwright configuration** with cross-browser support (Chromium, Firefox, WebKit)
+- **Generated HTML and trace reports** (`playwright-report/`, `reports/html-report/`)
+- Local mock app automated via Playwright
+
+### 🔧 **Planned Enhancements**
+- Expand Mock Post Editor coverage (formatting tools, autosave, negative scenarios)
+- Implement reusable utilities (custom waits, assertions)
+- Add test tagging (smoke, regression)
+- Add CI/CD pipeline using **GitHub Actions**
+- Integrate advanced reporting (Allure, screenshots, videos)
+- Add environment switching for local / staging / production-style setups
 
 ---
 
-## 📬 Contact
-- LinkedIn: 
-- Email: tnhsashlynn@gmail.com
+## 🌐 **03 — API Testing**  
+> **Status: In Progress**
 
+Current contents:
+- Postman collection (`Basic_API_Testing_Collection.json`)
+- API notes & documentation  
+- HTML execution report  
+
+### 🔧 Planned Enhancements
+- Add negative & edge case API scenarios  
+- JSON schema validation examples  
+- Integration between API tests and database checks  
+- Automate API suite using Newman  
+
+---
+
+## 🗄 **04 — Basic Database Testing**  
+> **Status: In Progress**
+
+Includes:
+- SQL validation scripts (`user_table_checks.sql`, `post_table_checks.sql`)
+- DB test summary report  
+
+### 🔧 Planned Enhancements
+- More complex joins & referential integrity checks  
+- CRUD validation scripts  
+- Test data setup/cleanup scripts  
+- Database-driven defect examples  
+
+---
+
+## 🚀 **05 — Release Testing (Smoke, Regression, Exit Reports)**  
+> **Status: In Progress**
+
+Contains:
+- Regression execution template  
+- Smoke testing checklist  
+- Post-release test report  
+
+### 🔧 Planned Enhancements
+- Full regression matrix  
+- Release gating criteria  
+- Traceability matrix linking test cases → bugs → requirements  
+- Multi-environment release simulation (dev/stage/prod)  
+
+---
+
+# 📌 Current Status & Roadmap
+
+### ✔ Completed
+- Manual test cases for Login, User Profile, Post Creation  
+- Execution summaries  
+- Bug reporting system with screenshots  
+- Test Plan  
+- Mock Post Editor app  
+- Basic automation, API, and SQL structure  
+
+### 🔄 In Progress
+- Expanding automation scripts  
+- Enhancing API & DB coverage  
+- Filling out release testing documentation  
+
+### 🧭 Upcoming Additions
+- More Playwright test suites  
+- API automation with Newman  
+- Database integration testing  
+- Traceability matrix  
+- Dashboard visual reports  
+
+---
+
+# 🎯 Purpose of This Portfolio
+
+This repository demonstrates:
+- My ability to **design structured test cases**  
+- Perform **manual testing** on real and demo environments  
+- Write **clear and actionable bug reports**  
+- Build and test **a custom web app**  
+- Apply **Playwright automation** using POM  
+- Practice **API & database validation**  
+- Follow QA best practices and documentation standards  
+
+---
+
+# 📬 Contact
+
+If you'd like to connect or know more:
+
+**Name:** Ashlynn Htun
+**Email:** tnhsashlynn@gmail.com
+**Portfolio Repo:** This GitHub repository  
+
+---
+
+Thank you for reviewing my QA portfolio!  

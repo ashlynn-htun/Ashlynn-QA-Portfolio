@@ -213,5 +213,5 @@ The combined approach demonstrates:
 ✔ Exploratory testing  
 ✔ Bug reporting skills  
 ✔ UI automation fundamentals  
-✔ Portfolio-ready documentation  
+
 
